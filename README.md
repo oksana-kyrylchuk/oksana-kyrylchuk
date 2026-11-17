@@ -12,10 +12,12 @@ Gliwice, Poland · remote or hybrid · available now
 - **Frontend architecture** — micro-frontends (Module Federation, single-spa), Nx and Turborepo monorepos
 - **Web performance** — Core Web Vitals, measured over repeated Lighthouse runs and guarded by tests in CI
 
-Also: React Native, Vue.js, Redux Toolkit, Jest / Vitest / React Testing Library, Playwright.
+Also: React Native, Vue.js, Redux Toolkit, Jest / Vitest / React Testing Library, Playwright, browser extensions (Manifest V3).
 
-**Project — [core-web-vitals](https://github.com/oksana-kyrylchuk/core-web-vitals)**  
-A deliberately slow React + TypeScript app, fixed one problem at a time and measured after every change: LCP 5.5 → 1.75 s, INP 1352 → 51 ms, TBT 1484 → 23 ms. 66 Playwright tests (user flows, axe-core, LCP/CLS/INP guards) run in GitHub Actions.
+**Projects**
+
+- **[a11y-assistant](https://github.com/oksana-kyrylchuk/a11y-assistant)** — a Manifest V3 extension for Chrome and Opera in React and TypeScript. A side panel scans the open page with axe-core, outlines each failing element and asks the Gemini API how to fix it. Playwright tests load the extension and click its icon in GitHub Actions; the panel itself passes axe checks in light and dark themes.
+- **[core-web-vitals](https://github.com/oksana-kyrylchuk/core-web-vitals)** — a deliberately slow React + TypeScript app, fixed one problem at a time and measured after every change: LCP 5.5 → 1.75 s, INP 1352 → 51 ms, TBT 1484 → 23 ms. 66 Playwright tests (user flows, axe-core, LCP/CLS/INP guards) run in GitHub Actions.
 
 Currently building a larger Next.js App Router project.
 
